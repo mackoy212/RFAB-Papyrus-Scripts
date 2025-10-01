@@ -1,11 +1,11 @@
 Scriptname RFAB_DifficultyMenu extends Quest  
 
 float[] Property DamageToPlayer Auto Hidden 
-{ Урон получаемый игроком }
+{ Г“Г°Г®Г­ ГЇГ®Г«ГіГ·Г ГҐГ¬Г»Г© ГЁГЈГ°Г®ГЄГ®Г¬ }
 float[] Property DamageByPlayer Auto Hidden 
-{ Урон наносимый игроком }
+{ Г“Г°Г®Г­ Г­Г Г­Г®Г±ГЁГ¬Г»Г© ГЁГЈГ°Г®ГЄГ®Г¬ }
 float Property DamageWithCurse Auto Hidden 
-{ Урон наносимый проклятым игроком }
+{ Г“Г°Г®Г­ Г­Г Г­Г®Г±ГЁГ¬Г»Г© ГЇГ°Г®ГЄГ«ГїГІГ»Г¬ ГЁГЈГ°Г®ГЄГ®Г¬ }
 
 string[] Property DifficultyNames Auto Hidden
 string[] Property DifficultyInfo Auto Hidden
@@ -25,14 +25,15 @@ Event OnInit()
 	DamageWithCurse = 50.0 * 0.01
 
 	DifficultyNames = new string[3]
-	DifficultyNames[0] = "Странник"
-	DifficultyNames[1] = "Довакин"
-	DifficultyNames[2] = "Легенда"
+	DifficultyNames[0] = "Г‘ГІГ°Г Г­Г­ГЁГЄ"
+	DifficultyNames[1] = "Г„Г®ГўГ ГЄГЁГ­"
+	DifficultyNames[2] = "Г‹ГҐГЈГҐГ­Г¤Г "
 	
 	DifficultyInfo = new string[3]
-	DifficultyInfo[0] = "Рекомендуется для новичков RFAB. Враги будут прощать ваши ошибки. \nВраги наносят половину урона, а ваш урон увеличен вдвое."
-	DifficultyInfo[1] = "Игра жестока, но при должном подходе вы сможете справиться с любыми трудностями.\nВраги наносят стандартный урон."
-	DifficultyInfo[2] = "Враги становятся гораздо опаснее и сражения с ними требуют более тщательной подготовки.\nВраги наносят в два раза больше урона."
+	DifficultyInfo[0] = "ГђГҐГЄГ®Г¬ГҐГ­Г¤ГіГҐГІГ±Гї Г¤Г«Гї Г­Г®ГўГЁГ·ГЄГ®Гў RFAB. Г‚Г°Г ГЈГЁ ГЎГіГ¤ГіГІ ГЇГ°Г®Г№Г ГІГј ГўГ ГёГЁ Г®ГёГЁГЎГЄГЁ. \nГ‚Г°Г ГЈГЁ Г­Г Г­Г®Г±ГїГІ ГЇГ®Г«Г®ГўГЁГ­Гі ГіГ°Г®Г­Г , Г  ГўГ Гё ГіГ°Г®Г­ ГіГўГҐГ«ГЁГ·ГҐГ­ ГўГ¤ГўГ®ГҐ."
+	DifficultyInfo[1] = "Г€ГЈГ°Г  Г¦ГҐГ±ГІГ®ГЄГ , Г­Г® ГЇГ°ГЁ Г¤Г®Г«Г¦Г­Г®Г¬ ГЇГ®Г¤ГµГ®Г¤ГҐ ГўГ» Г±Г¬Г®Г¦ГҐГІГҐ Г±ГЇГ°Г ГўГЁГІГјГ±Гї Г± Г«ГѕГЎГ»Г¬ГЁ ГІГ°ГіГ¤Г­Г®Г±ГІГїГ¬ГЁ.\nГ‚Г°Г ГЈГЁ Г­Г Г­Г®Г±ГїГІ Г±ГІГ Г­Г¤Г Г°ГІГ­Г»Г© ГіГ°Г®Г­."
+	DifficultyInfo[2] = "Г‚Г°Г ГЈГЁ Г±ГІГ Г­Г®ГўГїГІГ±Гї ГЈГ®Г°Г Г§Г¤Г® Г®ГЇГ Г±Г­ГҐГҐ ГЁ Г±Г°Г Г¦ГҐГ­ГЁГї Г± Г­ГЁГ¬ГЁ ГІГ°ГҐГЎГіГѕГІ ГЎГ®Г«ГҐГҐ ГІГ№Г ГІГҐГ«ГјГ­Г®Г© ГЇГ®Г¤ГЈГ®ГІГ®ГўГЄГЁ.\nГ‚Г°Г ГЈГЁ Г­Г Г­Г®Г±ГїГІ Гў Г¤ГўГ  Г°Г Г§Г  ГЎГ®Г«ГјГёГҐ ГіГ°Г®Г­Г ."
+	huy
 EndEvent
 
 Function UpdateDifficulty()
@@ -82,7 +83,7 @@ int Function GetMenuIndex()
 	else
 		ui.OpenCustomMenu("RFAB_DifficultyMenu", 0)
 		String[] InitParams = new String[14]
-		InitParams[0] = "Выбор сложности"
+		InitParams[0] = "Г‚Г»ГЎГ®Г° Г±Г«Г®Г¦Г­Г®Г±ГІГЁ"
 		InitParams[1] = true as String
 		InitParams[2] = 1 as String
 		InitParams[3] = 28 as String
